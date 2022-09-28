@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>点击按钮创建及增加字符串变量</p>
+    <button onclick="myFunction()">click</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() { //两个数字相加，返回数字相加的和，如果数字与字符串相加，返回字符串
+            var x =5+5;
+            var y ="5" +5;  //5 5
+            var z = "hello" + 5; //hello 5
+            var demoP = document.getElementById("demo");
+            demoP.innerHTML = x + "<br>" + y + "<br>" + z;
+        }
+    </script>
+</body>
+</html>

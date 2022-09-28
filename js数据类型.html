@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> typeof 操作符返回变量、对象、函数、表达式的类型。</p>
+<p id="demo"></p>
+<script>
+    document.getElementById("demo").innerHTML = 
+    typeof "john" + "<br>" +   //string
+    typeof 3.14 + "<br>" +    //number
+    typeof NaN + "<br>" +    //NaN 的数据类型是 number
+    typeof false + "<br>" +   //boolean
+    typeof [1,2,3,4] + "<br>" +   //数组(Array)的数据类型是 object
+    typeof {name:'john', age:34} + "<br>" + //object
+    typeof new Date() + "<br>" + //日期(Date)的数据类型为 object
+    typeof function () {} + "<br>" + //function
+    typeof myCar + "<br>" + //未定义变量的数据类型为 undefined
+    typeof null;  //null 的数据类型是 object
+</script>
+</body>
+</html>

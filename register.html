@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+</head>
+
+<body>
+    <div>基本情报</div>
+    <form action="/register" method="post">
+        <div>
+            <label for="sex">性别</label>
+            <input type="radio" name="sex" value="0" checked> 男性
+            <input type="radio" name="sex" value="1"> 女性
+            <input type="radio" name="sex" value="2"> その他
+        </div>
+
+        <div>
+            <label>出生年月</label>
+            <select name="year">
+                <option value="2022" selected>2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+            </select>
+            <label for="year">年</label>
+
+            <select name="month">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label for="month">月</label>
+
+
+            <select name="day">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <label for="day">日</label>
+        </div>
+
+        <div>
+            <label for="zip">郵便番号</label>
+            <input type="text" name="zip">
+        </div>
+        <div>
+            <label for="mail">メールアドレス</label>
+            <input type="text" name="mail" placeholder="例：zozo＠">
+
+        </div>
+        <div>
+            <label for="password">パスワード</label>
+            <input type="text" name="password">
+
+        </div>
+        <div>
+            <button name="submit">
+                <strong>同意して会員登録する</strong> 
+              </button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

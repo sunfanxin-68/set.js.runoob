@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--constructor 属性返回所有 JavaScript 变量的构造函数。-->
+
+    <p> constructor 属性返回变量或对象的构造函数。</p>
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = 
+    "john".constructor + "<br>" +  // 返回函数 String()  { [native code] }
+    (3.14).constructor + "<br>" +  // 返回函数 Number()  { [native code] }
+    false.constructor + "<br>" +  // 返回函数 Boolean() { [native code] }
+    [1,2,3,4].constructor + "<br>" +  // 返回函数 Array()   { [native code] }
+    {name:'john', age:34}.constructor + "<br>" +  // 返回函数 Object()  { [native code] }
+    new Date().constructor + "<br>" +  // 返回函数 Date()    { [native code] }
+    function () {}.constructor;  // 返回函数 Function(){ [native code] }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 代码块</title>
+</head>
+<body>
+    <h1>
+        JavaScript 可以分批地组合起来。
+       代码块以左花括号开始，以右花括号结束。
+    </h1>
+    <p id="myPar">代码块的作用是一并地执行语句序列。
+    </p>
+    <div id="myDiv">我是一个div。</div>
+    <p>
+        <button type="button" onclick="myFunction()" >点击两个元素会改变。</button>
+    </p>
+
+    <script>
+        function myFunction() {
+            document.getElementById("myPar").innerHTML="nihao";
+            document.getElementById("myDiv").innerHTML="hello";
+        }
+    </script>
+
+    
+</body>
+</html>

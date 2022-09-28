@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>点击这里来创建变量，并显示结果。</p>
+    <button onclick="myFunction()">click</button>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var carname="创建一个新变量"; //用var关键字来声明变量，赋值用等号
+            document.getElementById("demo").innerHTML=carname;
+            //然后把它放入 id="demo" 的 HTML 段落中：
+        }
+    </script>
+</body>
+</html>

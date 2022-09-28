@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>你可以通过两种方式访问对象属性:</p>
+    <p>你可以使用 .property 或 ["property"].</p>
+    <p id="demo"></p>
+    <script>
+        var person = {
+            firstName : "rain",
+            lover: "phayu",
+            id : 1999
+        };
+        document.getElementById("demo").innerHTML =
+        person.firstName + " " + person["lover"];
+    </script>
+
+</body>
+</html>
