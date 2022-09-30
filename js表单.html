@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*用于判断表单字段(fname)值是否存在， 如果不存在，就弹出信息，阻止表单提交：
+        */
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;""
+            if (x == null || x == " ") {
+                alert("the name");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name ="myForm" action="demo_form.php"
+    onsubmit="return validateForm()" method ="post">
+    name:<input type="text" name="fname">
+    <input type="submit" value="提交">
+
+    </form>
+
+    <h1>JavaScript 验证输入</h1>
+
+    <p>请输入 1 到 10 之间的数字：</p>
+
+    <input id="numb">
+
+    <button type="button" onclick="myFunction()">提交</button>
+
+    <p id="demo"></p>     
+    
+    <script>
+        function myFunction() {
+            var x, text;
+        
+            // 获取 id="numb" 的值
+         x = document.getElementById("numb").value;
+        
+            // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "error";
+            } else {
+                text = "correct";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+        </script>
+        <!--如果表单字段 (fname) 的值为空, required 属性会阻止表单提交：-->
+        <form action="demo_form.php" method="post">
+            <input type ="text" name="fname" required="required">
+            <input type="submit" value="提交">
+
+        </form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>为 JSON 字符串创建对象</h2>
+<p id="demo"></p>
+<script>
+    var text = '{"sites" : [' +
+    '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+	'{ "name":"Google" , "url":"www.google.com" },' +
+	'{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+
+	obj = JSON.parse(text);
+    document.getElementById("demo").innerHTML = obj.sites[0].name + " " + obj.sites[1].url;
+//JSON.parse() 方法用来解析 JSON 字符串，构造由字符串描述的 JavaScript 值或对象。提供可选的 reviver 函数用以在返回之前对所得到的对象执行变换 (操作)。
+
+</script>
+</body>
+</html>

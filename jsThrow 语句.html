@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>请输出一个 5 到 10 之间的数字:</p>
+    <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">测试输入</button>
+    <p id="message"></p>
+    <script>
+        /*throw 语句允许我们创建自定义错误。
+        正确的技术术语是：创建或抛出异常（exception）。
+        如果把 throw 与 try 和 catch 一起使用，那么您能够控制程序流，并生成自定义的错误消息。
+        */
+        function myFunction() {
+                var message, x;
+                message = document.getElementById("message");
+                message.innerHTML = "";
+                x = document.getElementById("demo").value;
+            try {
+        /*本例检测输入变量的值。如果值是错误的，
+        会抛出一个异常（错误）。catch 会捕捉到这个错误，
+        并显示一段自定义的错误消息：
+        */
+
+            if(x == " ") throw "value is empty";
+            if(isNaN(x)) throw "value is not a number";
+            x = Number(x);
+            if(x > 10) throw "too big";
+            if(x < 5) throw "too small";
+        }
+    catch(err) {
+        message.innerHTML = "错误: " + err;
+    }
+}
+    </script>
+</body>
+</html>

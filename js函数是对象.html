@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> arguments.length 属性返回函数接收到参数的个数：</p>
+<p id="demo"></p>
+<p> toString() 将函数作为一个字符串返回：</p>
+<p id="demo2"></p>
+
+<script>
+    function myFunction(rainphayu){
+    return arguments.length;
+    }
+    document.getElementById("demo").innerHTML = myFunction(1,2,3,4,5)
+    //arguments.length 属性返回函数调用过程接收到的参数个数：
+
+    function myFunction(a,b,c) {
+    return 2345678;
+}
+document.getElementById("demo2").innerHTML = myFunction.toString();//toString() 方法将函数作为一个字符串返回:
+    </script>
+</body>
+</html>

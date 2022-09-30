@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        //变量可以在使用后声明，也就是变量可以先使用再声明。
+        x =5;
+        elem = document.getElementById("demo");// 查找元素 
+        elem.innerHTML = x;  // 在元素中显示 x
+        var x;  // 声明 x
+
+        /**
+        * 不推荐的方式：先调用函数，再声明函数
+        */
+
+        catName("Chloe");
+
+        function catName(name) {
+            console.log("我的猫名叫 " + name);
+        }
+
+        /*
+        代码执行的结果是："我的猫名叫 Chloe"
+        */
+    </script>
+</body>
+</html>

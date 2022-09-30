@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript <b>this</b> 关键字</h2>
+
+<p>实例中，<b>this</b> 指向了 <b>person</b> 对象。</p>
+<p>因为 person 对象是 fullName 方法的所有者。</p>
+
+<p id="demo"></p>
+<p>实例中，<b>this</b> 指向了 window 对象:</p>
+
+<p id="this"></p>
+<script>
+    var person = {
+        firstName: "rain",
+        lastName:"phayu",
+        id :1234,
+        fullName :function() {
+            return this.firstName + " " + this.lastName;
+            //在方法中，this 表示该方法所属的对象。
+        }
+    };
+    // 显示对象的数据
+    document.getElementById("demo").innerHTML = person.fullName();
+    "use strict";
+    var x = this;
+    document.getElementById("this").innerHTML = x;  //[object Window]
+    /*单独使用 this，则它指向全局(Global)对象。
+    在浏览器中，window 就是该全局对象为 [object Window]:*/
+
+    
+</script>
+<!--在 HTML 事件句柄中，this 指向了接收事件的 HTML 元素：-->
+<h2>JavaScript <b>this</b> 关键字</h2>
+
+<button onclick="this.style.display='none'">点我后我就消失了</button>
+
+
+</body>
+</html> 

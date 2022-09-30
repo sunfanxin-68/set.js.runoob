@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript 全局变量</h2>
+
+<p>使用 var 关键字声明的全局作用域变量属于 window 对象。</p>
+
+<p id="demo"></p>
+
+<p>使用 let 关键字声明的全局作用域变量不属于 window 对象。</p>
+
+<p id="test"></p>
+<script>
+    var carName = "rain";
+    
+    // 可以使用 window.carName 访问变量
+    document.getElementById("demo").innerHTML = "I can display " + window.carName;
+
+    
+    </script>
+    <script>
+        let carName = "phayu";
+
+    // 不能使用 window.carName 访问变量
+    document.getElementById("test").innerHTML = "I can not display " + window.carName;//I can not display undefined
+    </script>
+    
+    
+</body>
+</html>
