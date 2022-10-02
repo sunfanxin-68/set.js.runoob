@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Class Gettter/Setter</h2>
+
+<p>类中添加 getter 和 setter 使用的是 get 和 set 关键字。</p>
+
+<p id="demo"></p>
+<script>
+    class person {
+        constructor(name) {
+            this.personname = name;
+            
+        }
+        get p_name() {
+            return this.personname;
+        }
+        set p_name(x) {
+            this.personname = x;
+        }
+    }
+    let Person = new person("rain");
+    document.getElementById("demo").innerHTML = Person.p_name;
+</script>
+</body>
+</html>

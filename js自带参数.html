@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>设置参数的默认值。</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+<script>
+   function myFunction(x,y =10) {
+     // 如果不传入参数 y ，则其默认值为 10
+    return x + y;
+   }
+  
+   document.getElementById("demo1").innerHTML = myFunction(1,5);// 1+ 5
+   // 输出 16, y 参数的默认值10  10+6
+   document.getElementById("demo2").innerHTML = myFunction(6); // 10 + 6
+ </script>
+</body>
+</html>

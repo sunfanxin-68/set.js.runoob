@@ -1,4 +1,4 @@
-function statsFinder(array) {
+ function statsFinder(array) {
     // Write your code here
       let avgArg = 0; //设一个平均值
       let total = 0;//设一个总数相加的和

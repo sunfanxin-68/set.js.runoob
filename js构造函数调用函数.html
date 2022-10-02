@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>该实例中， myFunction 是函数构造函数:</p>
+<p id="demo"></p>
+
+<script>
+    function myFunction(arg1,arg2) {
+        this.firstName = arg1;
+        this.lastName = arg2;
+    }
+    //函数调用前使用了 new 关键字, 则是调用了构造函数
+    var x = new myFunction("rain","phayu")
+    document.getElementById("demo").innerHTML = x.lastName;
+</script>
+</body>
+</html>
