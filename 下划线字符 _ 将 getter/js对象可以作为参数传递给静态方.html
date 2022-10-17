@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript 类的静态方法</h2>
+
+<p>"noob" 对象可以作为参数传递给静态方法。</p>
+
+<p id="demo"></p>
+<script>
+    class Runoob {
+        constructor(name) {
+            this.name = name;
+        }
+        static hello(x) {
+            return "Hello " + x.name;
+        }
+    }
+    let noob = new Runoob("cainiao");
+    document.getElementById("demo").innerHTML = Runoob.hello(noob);
+</script>
+</body>
+</html>
